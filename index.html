@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="birthday.css">
+        <title>Chúc mừng sinh nhật</title>
+    </head>
+    <body>
+        <div class="birthday-container">
+            <div class="box">
+                <div class="content">
+                    <img src="avatar-1.jpg"/>
+                </div>
+            </div>
+            <div class="person-name">
+                Thảo Nguyễn
+            </div>
+        </div>
+        <div class="container">
+            <div class="left">
+                <div class="image-container">
+                    <img id="changing-image" src="avatar-1.jpg" alt="Bức ảnh">
+                </div>
+            </div>
+            <div class="right">
+                <div class="upper">
+                    <img src="happy-birthday.png" alt="Happy Birthday" class="birthday-image">
+                </div>
+                <div class="lower">
+                    <div class="wishes" id="wishes-container"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <audio autoplay loop  id="playAudio">
+        <source src="nhacnen.mp3">
+    </audio>
+    <script src="index.js"></script>
+</html>

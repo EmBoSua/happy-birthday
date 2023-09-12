@@ -1,0 +1,85 @@
+/* Thiết lập màu nền cho body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Loại bỏ thanh cuộn màn hình */
+}
+
+/* Tạo container để chứa hai phần bên trái và bên phải */
+.container {
+    display: none;
+    height: 100vh; /* Chiều cao của màn hình */
+}
+
+/* Phần bên trái màu hồng */
+.left {
+    flex: 2; /* Sử dụng phần bằng nhau của container */
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Đặt kích thước tối đa cho bức ảnh */
+.image-container img {
+    max-width: 460px;
+    max-height: 100%;
+    border-radius: 20px; /* Bo góc */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+    transition: opacity 0.5s ease-in-out; /* Thêm transition cho opacity */
+}
+
+/* Định nghĩa keyframes animation cho hiệu ứng xoay */
+.image-container img.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Thêm transition cho opacity */
+}
+
+
+
+/* Phần bên phải màu vàng */
+.right {
+    flex: 2; /* Sử dụng phần bằng nhau của container */
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    background-image: url('paper.png'); /* Thay 'your-background-image.jpg' bằng URL của hình ảnh nền */
+    background-size: contain; /* Để hình ảnh nền phù hợp với kích thước của .right và không bị biến dạng */
+    background-position: center; /* Để căn giữa hình ảnh nền */
+    background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+    justify-content: center;
+    align-items: center;
+}
+
+.upper {
+    flex: 1; /* Sử dụng 1 phần 3 */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 50px;
+    max-height: 200px;
+}
+
+.birthday-image {
+    max-width: 100%; /* Tối đa chiều rộng 100% của phần upper */
+    max-height: 100%; /* Tối đa chiều cao 100% của phần upper */
+    object-fit: contain; /* Để tự động tính chiều cao dựa trên tỷ lệ khung hình */
+}
+
+/* Phần dưới chiếm 2 phần 3 */
+.lower {
+    flex: 2; /* Sử dụng 2 phần 3 */
+    display: flex;
+    flex-direction: column; /* Đặt chiều dọc cho phần dưới */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+#wishes-container {
+    margin-right: 200px;
+    text-align: center;
+    font-size: 24px; /* Điều chỉnh kích thước của chữ */
+    font-family: "VNI-Payung", Arial, sans-serif; /* Sử dụng kiểu chữ thư pháp tiếng Việt */
+}
+
